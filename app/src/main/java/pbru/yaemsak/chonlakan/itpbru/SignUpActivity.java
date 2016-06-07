@@ -19,6 +19,8 @@ public class SignUpActivity extends AppCompatActivity {
                    userString,
                    passwordString;
 
+    private static final String urlUpload = "http://www.swiftcodingthai.com/pbru2/add_user_master.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,7 +52,7 @@ public class SignUpActivity extends AppCompatActivity {
 
         } else {
             //False
-
+            uploadValueToServer();
 
 
 
@@ -58,6 +60,13 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     }//click SignUp
+
+    private void uploadValueToServer() {
+
+
+
+
+    }//Upload
 
     private boolean checkSpace() {
 
