@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
         myManage = new MyManage(this);
 
+        //Test Add new User
+        //myManage.addNewUser("11", "name", "surn", "user", "pass");
+
+
+
     }//Main Method
 
     public void clickSignUpMain(View view) {
