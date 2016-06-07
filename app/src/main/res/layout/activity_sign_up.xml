@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:text="@string/clicksignup"
         android:id="@+id/button3"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:onClick="clickSignUpSign" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -59,7 +60,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -83,7 +85,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText2"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -107,7 +110,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText3"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:inputType="text" />
         </LinearLayout>
 
         <LinearLayout
@@ -131,7 +135,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText4"
-                android:layout_weight="3" />
+                android:layout_weight="3"
+                android:inputType="text" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
