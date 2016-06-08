@@ -17,11 +17,11 @@
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:padding="50dp"
+        android:padding="35dp"
         android:background="#96ffffff"
-        android:layout_marginLeft="60dp"
+        android:layout_marginLeft="40dp"
         android:layout_marginTop="30dp"
-        android:layout_marginBottom="100dp">
+        android:layout_marginBottom="130dp">
 
             <ImageView
                 android:layout_width="150dp"

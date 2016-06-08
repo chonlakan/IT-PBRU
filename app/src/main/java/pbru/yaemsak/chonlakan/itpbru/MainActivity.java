@@ -89,6 +89,11 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Welcome " + loginStrings[1] + " " + loginStrings[2],
                         Toast.LENGTH_SHORT).show();
 
+                Intent intent = new Intent(MainActivity.this, CalendarActivity.class);//next calendar login complete
+                intent.putExtra("Login", loginStrings);
+                startActivity(intent);
+                finish();//
+
             } else {
                 MyAlert myAlert = new MyAlert();
                 myAlert.myDialog(this, "Password False", "Please Try Again Password False");
@@ -98,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 
         } catch (Exception e) {
             MyAlert myAlert = new MyAlert();
-            myAlert.myDialog(this, "ไม่มีผู้ใช้นี้","ไม่มี"+ userString + "ในฐานข้อมูล");
+            myAlert.myDialog(this, "ไม่มีผู้ใช้นี้","ไม่มี "+ userString + " ในฐานข้อมูล");
 
         }
 
