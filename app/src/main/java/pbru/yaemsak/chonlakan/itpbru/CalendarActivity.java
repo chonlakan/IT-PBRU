@@ -36,7 +36,7 @@ public class CalendarActivity extends AppCompatActivity {
 
     private void confirmDialog(int day, int month, int year) {
 
-        String strDate = Integer.toString(day) +
+        final String strDate = Integer.toString(day) +
                 "/" + Integer.toString(month + 1) +
                 "/" + Integer.toString(year);
 
@@ -47,25 +47,27 @@ public class CalendarActivity extends AppCompatActivity {
         builder.setMessage("Note Account");
 
 
-        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
 
-        builder.setPositiveButton("Receivable", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("Receivable", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
                 Intent intent = new Intent(CalendarActivity.this, UploadAccount.class);
                 intent.putExtra("Login", getIntent().getStringArrayExtra("Login"));
                 intent.putExtra("InOut", 0);
+                intent.putExtra("Date", strDate);
                 startActivity(intent);
 
                 dialog.dismiss();
             }
         });
+
         builder.setNeutralButton("Payable", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -73,6 +75,7 @@ public class CalendarActivity extends AppCompatActivity {
                 Intent intent = new Intent(CalendarActivity.this, UploadAccount.class);
                 intent.putExtra("Login", getIntent().getStringArrayExtra("Login"));
                 intent.putExtra("InOut", 1);
+                intent.putExtra("Date", strDate);
                 startActivity(intent);
 
                 dialog.dismiss();
