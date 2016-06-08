@@ -66,5 +66,4 @@ public class CalendarActivity extends AppCompatActivity {
 
     }//confirmDialog
 
-
 }//Main Class
